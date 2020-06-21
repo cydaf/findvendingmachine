@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>WEVEN - 註冊</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="manifest" href="manifest.json" />
+
+    <!--animation.css-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
+    <script>
+        if ("serviceWorker.js" in navigator) {
+            console.log("Will service worker register?");
+            navigator.serviceWorker
+                .register("service-worker.js")
+                .then(function(reg) {
+                    console.log("yes it did.");
+                })
+                .catch(function(err) {
+                    console.log("No it didn,t This happened: ", err);
+                });
+        }
+    </script>
+
+    <script>
+        function check() {
+
+            var password = document.getElementById("password");
+            var password2 = document.getElementById("password2");
+
+            if (password.value != password2.value) {
+                alert("兩次密碼輸入不同，請重新輸入!");
+                location.href = "registration.html";
+                return false;
+            }
+            /*用form就不用else location
+            else{           
+                location.href="registration.php";
+            }*/
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preload-content">
+            <div id="original-load"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-area"></header>
+
+    <!-- ##### Blog Wrapper Start ##### -->
+    <div class="blog-wrapper section-padding-40 clearfix" style="text-align: center;">
+        <div class="container">
+            <div>
+                <!-- Single Blog Area -->
+                <div class="single-blog-area clearfix">
+                    <!-- Blog Content -->
+
+                    <form method="post" action="registration.php" onSubmit="return check()">
+                        <div class="single-blog-content">
+                            <h4 style="font-weight: bold; text-align: center;">註冊</h4><br />
+
+                            <p style="padding-top:40px" class="p-size">
+                                帳號&emsp;&emsp;&nbsp;&emsp;<input type="email" name="account" size="18" class="text lightSpeedIn" placeholder="email" required style="animation-duration: 1s" /><br /><br /> 密碼&emsp;&emsp;&nbsp;&emsp;
+                                <input type="password" name="password" id="password" maxlenth="10" size="18" class="text lightSpeedIn" placeholder="password" required style="animation-duration: 1.5s" /><br /><br /> 確認密碼&nbsp;&emsp;
+                                <input type="password" name="password2" id="password2" maxlenth="10" size="18" class="text lightSpeedIn" placeholder="confirm-password" required style="animation-duration: 2s" /><br /><br /> 暱稱&emsp;&emsp;&nbsp;&emsp;
+                                <input type="text" name="name" size="18" class="text lightSpeedIn" placeholder="name" required style="animation-duration: 2.5s" /><br /><br /> &emsp;&emsp;性別&emsp;&emsp;&emsp;
+                                <input type="radio" name="gender" value="男" />&emsp;男&emsp;&emsp;
+                                <input type="radio" name="gender" value="女" />&emsp;女&emsp;&emsp;&emsp;&emsp;&ensp;
+                            </p>
+                            <div class="form-group dropdown">
+
+                                &emsp;<span style="
+                      color: #878787;
+                      font-size: 14px;
+                      font-family: helveticaneuemedium;
+                    ">職業</span
+                  >
+                  &emsp;&nbsp;&emsp;&nbsp;
+                  <select name="job" class="down">
+                    <option class="dropdown-item" value="#">請選擇</option>
+                    <option value="學生">學生</option>
+                    <option value="農牧業">農牧業</option>
+                    <option value="漁業">漁業</option>
+                    <option value="木材森林業">木材森林業</option>
+                    <option value="礦業採石業">礦業採石業</option>
+                    <option value="交通運輸業">交通運輸業</option>
+                    <option value="餐旅業">餐旅業</option>
+                    <option value="製造業">製造業</option>
+                    <option value="新聞廣告業">新聞廣告業</option>
+                    <option value="衛生保健業">衛生保健業</option>
+                    <option value="娛樂業">娛樂業</option>
+                    <option value="文教機構">文教機構</option>
+                    <option value="宗教團體">宗教團體</option>
+                    <option value="公共事業">公共事業</option>
+                    <option value="一般商業">一般商業</option>
+                    <option value="服務業">服務業</option>
+                    <option value="家庭管理">家庭管理</option>
+                    <option value="治安人員">治安人員</option>
+                    <option value="軍人">軍人</option>
+                    <option value="資訊業">資訊業</option>
+                    <option value="運動人員">運動人員</option>
+                  </select>
+                  &emsp;&ensp;&emsp;
+                
+                <br /><br>
+              </div>
+
+              <a href="login.php" class="post-tag"
+                >已有會員了?請回到登入畫面</a
+              ><br>
+                 <button
+                type="submit"
+                class="btn y-bt" >提交</button>
+                    </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="title-bg">
+    </div>
+
+    <!-- ##### Footer Area Start ##### -->
+    
+        <!-- ##### Footer Area End ##### -->
+
+        <!-- jQuery (Necessary for All JavaScript Plugins) -->
+        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <!-- Popper js -->
+        <script src="js/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Plugins js -->
+        <script src="js/plugins.js"></script>
+        <!-- Active js -->
+        <script src="js/active.js"></script>
+</body>
+
+</html>
